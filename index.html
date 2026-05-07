@@ -1,43 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <title>My Blog</title>
+        <title>OSPF Overview - Vanguard Technologies</title>
     </head>
+
     <body>
+
         <header>
-            <h1>WELCOME TO MY NEW SITE FOR NETWORKING</h1>
+            <h1>Vanguard ICT Solutions</h1>
         </header>
-       
+
         <nav>
-            <a href="contact.html">Contact</a>
+            <a hre="contact.html">Contact</a>
             <a href="lab.html">Labs</a>
-            <a href="home.html">Home</a>
+            <a hre="home.html">Home</a>
         </nav>
+
         <main>
-            <section>
-                <h2> This course is for ccna beginners</h2>
-                <p> We will cover ccna routing and switching based on the main outline of cisco technologies</p>
-            </section>
-            <section>
-                <h2>Topics that we cover </h2>
-                <p> Routing, Switching, Automation</p>
-                <article>
-                    <h3>You should the basic's of routing and switching in the previous course CompTIA N+</h3>
-                    <p>And we have hand's on labs working with real and also simulators</p>
-                </article>
-            </section>
-            <aside>
-                 <h3>💡 Good to Know</h3>
-                <p>Exam vouchers and dumps available at our testing center!</p>
-            </aside>
+            <article>
+
+                <h1 style="text-align: center; color: rgb(24, 189, 211);">OSPF Overview</h1>
+                
+                <p> OSPF is a Link State Routing Protocol.</p>
+                <p> It is designed by <strong>IEEE</strong> and <em>standardized</em>.</p>
+
+                <blockquote>
+                    <p style="text-align: center;">RFCnumber is 2328</p>
+                    <cite style="display: block; text-align: center;">Cisco Offical Website</cite>
+                </blockquote>    
+
+                <p>
+                    <dfn><abbr style="color: blue;" title="Link State Advertisement">LSA</abbr></dfn>
+                    is a packet sent by OSPF to share routing information.
+                </p>
+
+                <p>
+                    We also compare it with
+                    <abbr style="color: blue;"title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> 
+                    and <abbr style="color: blue;" title="Border Gateway Protocol">BGP</abbr>
+                </p>
+
+                <h2>Subnet Calculation</h2>
+                <p>A /24 network gives us <span style=" color: red">2</span><span style="color: blue;"><sup>8</span></span></sup> = 256 addresses.</p>
+                <p>A /16 network gives us 2<sup>16</sup> = 65,536 addresses.</p>  
+               
+                <h2>Basic OSPF Commands</h2>
+
+                <p>To verify OSPF neighbor use
+                <code>&lt;show ip ospf neighbor&gt;</code> command.</p>
+
+                <p>Type this command:</p>
+                <kbd> show ip rotute ospf</kbd>
+
+                <p> Executed output</p>
+                <samp>Shows the OSPF routing table entries</samp>
+
+                <p> Full OSPF configuration example:</p>
+
+                <pre>
+router ospf 1
+network 172.16.0.0 0.0.255.255 area 10
+router-id 1.1.1.1
+                </pre>
+
+                <p>The syntax is:
+                <code> router ospf &lt; process-id&gt;</code></p>
+
+                <p>Routing &amp; Switching are coverd in 
+                CCNA&nbsp;and&nbsp;CCNP.</p>
+
+                
+            </article>
         </main>
+
         <footer>
-            <p>©2026 Vanguard Technologies ICT Solutions</p>
-            <p>Made by our professional trainers</p>
-            <p>Contact: info@vanguardtechnologies.com</p>
-            <p> about vanguard core its ICT Solutions</p>
-        </footer>    
+            <p>&copy; 2026 Vanguard Technologies ICT Solutions</p>
+        </footer>
 
 
     </body>
