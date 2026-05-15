@@ -1,83 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8">
-        <title>OSPF Overview - Vanguard Technologies</title>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OSPF Overview — Vanguard Technologies</title>
+</head>
+<body>
 
-    <body>
+  <a href="#main-content" class="skip-link">
+    Skip to main content
+  </a>
 
-        <header>
-            <h1>Vanguard ICT Solutions</h1>
-        </header>
+  <header>
+    <img src="logo.png" alt="Vanguard Technologies">
+    <nav aria-label="main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="ospf.html">OSPF Guide</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <nav>
-            <a hre="contact.html">Contact</a>
-            <a href="lab.html">Labs</a>
-            <a hre="home.html">Home</a>
-        </nav>
+  <main id="main-content">
 
-        <main>
-            <article>
+    <h1>OSPF Overview</h1>
 
-                <h1 style="text-align: center; color: rgb(24, 189, 211);">OSPF Overview</h1>
-                
-                <p> OSPF is a Link State Routing Protocol.</p>
-                <p> It is designed by <strong>IEEE</strong> and <em>standardized</em>.</p>
+    <p>OSPF is a link state routing protocol
+    defined in RFC 2328.</p>
 
-                <blockquote>
-                    <p style="text-align: center;">RFCnumber is 2328</p>
-                    <cite style="display: block; text-align: center;">Cisco Offical Website</cite>
-                </blockquote>    
+    <h2>Key Features</h2>
+    <ul>
+      <li>Fast convergence</li>
+      <li>Supports VLSM</li>
+      <li>Uses Dijkstra algorithm</li>
+    </ul>
 
-                <p>
-                    <dfn><abbr style="color: blue;" title="Link State Advertisement">LSA</abbr></dfn>
-                    is a packet sent by OSPF to share routing information.
-                </p>
+    <h2>Protocol Comparison</h2>
+    <table>
+      <caption>Routing Protocols Comparison</caption>
+      <thead>
+        <tr>
+          <th scope="col">Protocol</th>
+          <th scope="col">AD Value</th>
+          <th scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">OSPF</th>
+          <td>110</td>
+          <td>Link State</td>
+        </tr>
+        <tr>
+          <th scope="row">EIGRP</th>
+          <td>90</td>
+          <td>Hybrid</td>
+        </tr>
+      </tbody>
+    </table>
 
-                <p>
-                    We also compare it with
-                    <abbr style="color: blue;"title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> 
-                    and <abbr style="color: blue;" title="Border Gateway Protocol">BGP</abbr>
-                </p>
+    <h2>Learn More</h2>
+    <ul>
+      <li><a href="ospf-config.html">OSPF Configuration Guide</a></li>
+      <li><a href="ospf-troubleshoot.html">OSPF Troubleshooting</a></li>
+    </ul>
 
-                <h2>Subnet Calculation</h2>
-                <p>A /24 network gives us <span style=" color: red">2</span><span style="color: blue;"><sup>8</span></span></sup> = 256 addresses.</p>
-                <p>A /16 network gives us 2<sup>16</sup> = 65,536 addresses.</p>  
-               
-                <h2>Basic OSPF Commands</h2>
+  </main>
 
-                <p>To verify OSPF neighbor use
-                <code>&lt;show ip ospf neighbor&gt;</code> command.</p>
+  <footer>
+    <p>&copy; 2026 Vanguard Technologies</p>
+  </footer>
 
-                <p>Type this command:</p>
-                <kbd> show ip rotute ospf</kbd>
-
-                <p> Executed output</p>
-                <samp>Shows the OSPF routing table entries</samp>
-
-                <p> Full OSPF configuration example:</p>
-
-                <pre>
-router ospf 1
-network 172.16.0.0 0.0.255.255 area 10
-router-id 1.1.1.1
-                </pre>
-
-                <p>The syntax is:
-                <code> router ospf &lt; process-id&gt;</code></p>
-
-                <p>Routing &amp; Switching are coverd in 
-                CCNA&nbsp;and&nbsp;CCNP.</p>
-
-                
-            </article>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 Vanguard Technologies ICT Solutions</p>
-        </footer>
-
-
-    </body>
+</body>
 </html>
